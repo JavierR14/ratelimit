@@ -66,6 +66,7 @@ func newDescriptorStatus(status pb.RateLimitResponse_Code, requestsPerUnit uint3
 func makeSimpleRedisSettings(redisPort int, perSecondPort int, perSecond bool, localCacheSize int) settings.Settings {
 	s := defaultSettings()
 
+	s.RedisTlsConfig = nil
 	s.RedisPerSecond = perSecond
 	s.LocalCacheSizeInBytes = localCacheSize
 	s.BackendType = "redis"
