@@ -12,6 +12,8 @@ import (
 	"strconv"
 	"sync"
 
+	"google.golang.org/grpc/reflection"
+
 	"github.com/envoyproxy/ratelimit/src/stats"
 
 	"os"
@@ -179,6 +181,7 @@ func newServer(s settings.Settings, name string, statsManager stats.Manager, loc
 
 	ret := new(server)
 	ret.grpcServer = grpc.NewServer(s.GrpcUnaryInterceptor)
+	reflection.Register(ret.grpcServer)
 
 	// setup listen addresses
 	ret.httpAddress = net.JoinHostPort(s.Host, strconv.Itoa(s.Port))
