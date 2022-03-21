@@ -1,7 +1,7 @@
 package stats
 
 import (
-	"github.com/envoyproxy/ratelimit/src/settings"
+	"github.com/JavierR14/ratelimit/src/settings"
 	gostats "github.com/lyft/gostats"
 	logger "github.com/sirupsen/logrus"
 )

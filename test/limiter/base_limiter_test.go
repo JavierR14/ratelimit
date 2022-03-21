@@ -1,16 +1,17 @@
 package limiter
 
 import (
-	mockstats "github.com/envoyproxy/ratelimit/test/mocks/stats"
 	"math/rand"
 	"testing"
 
+	mockstats "github.com/JavierR14/ratelimit/test/mocks/stats"
+
+	"github.com/JavierR14/ratelimit/src/config"
+	"github.com/JavierR14/ratelimit/src/limiter"
+	"github.com/JavierR14/ratelimit/test/common"
+	mock_utils "github.com/JavierR14/ratelimit/test/mocks/utils"
 	"github.com/coocood/freecache"
 	pb "github.com/envoyproxy/go-control-plane/envoy/service/ratelimit/v3"
-	"github.com/envoyproxy/ratelimit/src/config"
-	"github.com/envoyproxy/ratelimit/src/limiter"
-	"github.com/envoyproxy/ratelimit/test/common"
-	mock_utils "github.com/envoyproxy/ratelimit/test/mocks/utils"
 	"github.com/golang/mock/gomock"
 	stats "github.com/lyft/gostats"
 	"github.com/stretchr/testify/assert"

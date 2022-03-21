@@ -4,8 +4,8 @@ import (
 	"testing"
 	"time"
 
+	"github.com/JavierR14/ratelimit/src/redis"
 	"github.com/alicebob/miniredis/v2"
-	"github.com/envoyproxy/ratelimit/src/redis"
 	stats "github.com/lyft/gostats"
 	"github.com/stretchr/testify/assert"
 )

@@ -5,25 +5,26 @@
 package memcached_test
 
 import (
-	mockstats "github.com/envoyproxy/ratelimit/test/mocks/stats"
 	"math/rand"
 	"strconv"
 	"testing"
 
+	mockstats "github.com/JavierR14/ratelimit/test/mocks/stats"
+
 	"github.com/bradfitz/gomemcache/memcache"
 	"github.com/coocood/freecache"
 
+	"github.com/JavierR14/ratelimit/src/config"
+	"github.com/JavierR14/ratelimit/src/limiter"
+	"github.com/JavierR14/ratelimit/src/memcached"
+	"github.com/JavierR14/ratelimit/src/settings"
+	"github.com/JavierR14/ratelimit/src/utils"
 	pb "github.com/envoyproxy/go-control-plane/envoy/service/ratelimit/v3"
-	"github.com/envoyproxy/ratelimit/src/config"
-	"github.com/envoyproxy/ratelimit/src/limiter"
-	"github.com/envoyproxy/ratelimit/src/memcached"
-	"github.com/envoyproxy/ratelimit/src/settings"
-	"github.com/envoyproxy/ratelimit/src/utils"
 	stats "github.com/lyft/gostats"
 
-	"github.com/envoyproxy/ratelimit/test/common"
-	mock_memcached "github.com/envoyproxy/ratelimit/test/mocks/memcached"
-	mock_utils "github.com/envoyproxy/ratelimit/test/mocks/utils"
+	"github.com/JavierR14/ratelimit/test/common"
+	mock_memcached "github.com/JavierR14/ratelimit/test/mocks/memcached"
+	mock_utils "github.com/JavierR14/ratelimit/test/mocks/utils"
 	"github.com/golang/mock/gomock"
 	"github.com/stretchr/testify/assert"
 )

@@ -1,3 +1,4 @@
+//go:build integration
 // +build integration
 
 package integration_test
@@ -11,11 +12,11 @@ import (
 	"testing"
 	"time"
 
+	"github.com/JavierR14/ratelimit/src/memcached"
+	"github.com/JavierR14/ratelimit/src/service_cmd/runner"
+	"github.com/JavierR14/ratelimit/src/settings"
+	"github.com/JavierR14/ratelimit/test/common"
 	pb "github.com/envoyproxy/go-control-plane/envoy/service/ratelimit/v3"
-	"github.com/envoyproxy/ratelimit/src/memcached"
-	"github.com/envoyproxy/ratelimit/src/service_cmd/runner"
-	"github.com/envoyproxy/ratelimit/src/settings"
-	"github.com/envoyproxy/ratelimit/test/common"
 	"github.com/golang/protobuf/ptypes/duration"
 	"github.com/kelseyhightower/envconfig"
 	"github.com/stretchr/testify/assert"

@@ -3,13 +3,14 @@ package main
 import (
 	"flag"
 	"fmt"
-	"github.com/envoyproxy/ratelimit/src/settings"
-	"github.com/envoyproxy/ratelimit/src/stats"
 	"io/ioutil"
 	"os"
 	"path/filepath"
 
-	"github.com/envoyproxy/ratelimit/src/config"
+	"github.com/JavierR14/ratelimit/src/settings"
+	"github.com/JavierR14/ratelimit/src/stats"
+
+	"github.com/JavierR14/ratelimit/src/config"
 	gostats "github.com/lyft/gostats"
 )
 

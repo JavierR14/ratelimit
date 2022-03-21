@@ -14,7 +14,7 @@ import (
 
 	"google.golang.org/grpc/reflection"
 
-	"github.com/envoyproxy/ratelimit/src/stats"
+	"github.com/JavierR14/ratelimit/src/stats"
 
 	"os"
 	"os/signal"
@@ -22,10 +22,10 @@ import (
 
 	"net"
 
+	"github.com/JavierR14/ratelimit/src/limiter"
+	"github.com/JavierR14/ratelimit/src/settings"
 	"github.com/coocood/freecache"
 	pb "github.com/envoyproxy/go-control-plane/envoy/service/ratelimit/v3"
-	"github.com/envoyproxy/ratelimit/src/limiter"
-	"github.com/envoyproxy/ratelimit/src/settings"
 	"github.com/golang/protobuf/jsonpb"
 	"github.com/gorilla/mux"
 	reuseport "github.com/kavu/go_reuseport"

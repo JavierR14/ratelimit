@@ -1,24 +1,25 @@
 package redis_test
 
 import (
-	"github.com/envoyproxy/ratelimit/test/mocks/stats"
 	"testing"
+
+	"github.com/JavierR14/ratelimit/test/mocks/stats"
 
 	"github.com/coocood/freecache"
 	"github.com/mediocregopher/radix/v3"
 
+	"github.com/JavierR14/ratelimit/src/config"
+	"github.com/JavierR14/ratelimit/src/limiter"
+	"github.com/JavierR14/ratelimit/src/redis"
+	"github.com/JavierR14/ratelimit/src/utils"
 	pb "github.com/envoyproxy/go-control-plane/envoy/service/ratelimit/v3"
-	"github.com/envoyproxy/ratelimit/src/config"
-	"github.com/envoyproxy/ratelimit/src/limiter"
-	"github.com/envoyproxy/ratelimit/src/redis"
-	"github.com/envoyproxy/ratelimit/src/utils"
 	gostats "github.com/lyft/gostats"
 
 	"math/rand"
 
-	"github.com/envoyproxy/ratelimit/test/common"
-	mock_redis "github.com/envoyproxy/ratelimit/test/mocks/redis"
-	mock_utils "github.com/envoyproxy/ratelimit/test/mocks/utils"
+	"github.com/JavierR14/ratelimit/test/common"
+	mock_redis "github.com/JavierR14/ratelimit/test/mocks/redis"
+	mock_utils "github.com/JavierR14/ratelimit/test/mocks/utils"
 	"github.com/golang/mock/gomock"
 	"github.com/stretchr/testify/assert"
 )

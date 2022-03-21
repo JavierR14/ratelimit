@@ -4,9 +4,9 @@ import (
 	"errors"
 	"testing"
 
+	"github.com/JavierR14/ratelimit/src/memcached"
+	mock_memcached "github.com/JavierR14/ratelimit/test/mocks/memcached"
 	"github.com/bradfitz/gomemcache/memcache"
-	"github.com/envoyproxy/ratelimit/src/memcached"
-	mock_memcached "github.com/envoyproxy/ratelimit/test/mocks/memcached"
 	"github.com/golang/mock/gomock"
 	stats "github.com/lyft/gostats"
 	"github.com/stretchr/testify/assert"

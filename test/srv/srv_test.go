@@ -5,7 +5,7 @@ import (
 	"net"
 	"testing"
 
-	"github.com/envoyproxy/ratelimit/src/srv"
+	"github.com/JavierR14/ratelimit/src/srv"
 	"github.com/stretchr/testify/assert"
 )
 

@@ -17,11 +17,12 @@ package memcached
 
 import (
 	"context"
-	"github.com/envoyproxy/ratelimit/src/stats"
 	"math/rand"
 	"strconv"
 	"sync"
 	"time"
+
+	"github.com/JavierR14/ratelimit/src/stats"
 
 	"github.com/coocood/freecache"
 	gostats "github.com/lyft/gostats"
@@ -32,11 +33,11 @@ import (
 
 	pb "github.com/envoyproxy/go-control-plane/envoy/service/ratelimit/v3"
 
-	"github.com/envoyproxy/ratelimit/src/config"
-	"github.com/envoyproxy/ratelimit/src/limiter"
-	"github.com/envoyproxy/ratelimit/src/settings"
-	"github.com/envoyproxy/ratelimit/src/srv"
-	"github.com/envoyproxy/ratelimit/src/utils"
+	"github.com/JavierR14/ratelimit/src/config"
+	"github.com/JavierR14/ratelimit/src/limiter"
+	"github.com/JavierR14/ratelimit/src/settings"
+	"github.com/JavierR14/ratelimit/src/srv"
+	"github.com/JavierR14/ratelimit/src/utils"
 )
 
 type rateLimitMemcacheImpl struct {

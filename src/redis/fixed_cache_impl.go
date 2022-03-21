@@ -1,14 +1,15 @@
 package redis
 
 import (
-	"github.com/envoyproxy/ratelimit/src/stats"
 	"math/rand"
 
+	"github.com/JavierR14/ratelimit/src/stats"
+
+	"github.com/JavierR14/ratelimit/src/config"
+	"github.com/JavierR14/ratelimit/src/limiter"
+	"github.com/JavierR14/ratelimit/src/utils"
 	"github.com/coocood/freecache"
 	pb "github.com/envoyproxy/go-control-plane/envoy/service/ratelimit/v3"
-	"github.com/envoyproxy/ratelimit/src/config"
-	"github.com/envoyproxy/ratelimit/src/limiter"
-	"github.com/envoyproxy/ratelimit/src/utils"
 	logger "github.com/sirupsen/logrus"
 	"golang.org/x/net/context"
 )

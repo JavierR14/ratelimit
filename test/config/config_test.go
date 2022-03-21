@@ -1,15 +1,16 @@
 package config_test
 
 import (
-	"github.com/envoyproxy/ratelimit/test/common"
 	"io/ioutil"
 	"testing"
 
+	"github.com/JavierR14/ratelimit/test/common"
+
+	"github.com/JavierR14/ratelimit/src/config"
+	mockstats "github.com/JavierR14/ratelimit/test/mocks/stats"
 	pb_struct "github.com/envoyproxy/go-control-plane/envoy/extensions/common/ratelimit/v3"
 	pb "github.com/envoyproxy/go-control-plane/envoy/service/ratelimit/v3"
 	pb_type "github.com/envoyproxy/go-control-plane/envoy/type/v3"
-	"github.com/envoyproxy/ratelimit/src/config"
-	mockstats "github.com/envoyproxy/ratelimit/test/mocks/stats"
 	"github.com/lyft/gostats"
 	"github.com/stretchr/testify/assert"
 )

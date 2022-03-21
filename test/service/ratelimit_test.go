@@ -1,21 +1,22 @@
 package ratelimit_test
 
 import (
-	"github.com/envoyproxy/ratelimit/src/stats"
 	"math"
 	"sync"
 	"testing"
 
+	"github.com/JavierR14/ratelimit/src/stats"
+
+	"github.com/JavierR14/ratelimit/src/config"
+	"github.com/JavierR14/ratelimit/src/redis"
+	ratelimit "github.com/JavierR14/ratelimit/src/service"
+	"github.com/JavierR14/ratelimit/test/common"
+	mock_config "github.com/JavierR14/ratelimit/test/mocks/config"
+	mock_limiter "github.com/JavierR14/ratelimit/test/mocks/limiter"
+	mock_loader "github.com/JavierR14/ratelimit/test/mocks/runtime/loader"
+	mock_snapshot "github.com/JavierR14/ratelimit/test/mocks/runtime/snapshot"
+	mock_stats "github.com/JavierR14/ratelimit/test/mocks/stats"
 	pb "github.com/envoyproxy/go-control-plane/envoy/service/ratelimit/v3"
-	"github.com/envoyproxy/ratelimit/src/config"
-	"github.com/envoyproxy/ratelimit/src/redis"
-	ratelimit "github.com/envoyproxy/ratelimit/src/service"
-	"github.com/envoyproxy/ratelimit/test/common"
-	mock_config "github.com/envoyproxy/ratelimit/test/mocks/config"
-	mock_limiter "github.com/envoyproxy/ratelimit/test/mocks/limiter"
-	mock_loader "github.com/envoyproxy/ratelimit/test/mocks/runtime/loader"
-	mock_snapshot "github.com/envoyproxy/ratelimit/test/mocks/runtime/snapshot"
-	mock_stats "github.com/envoyproxy/ratelimit/test/mocks/stats"
 	"github.com/golang/mock/gomock"
 	gostats "github.com/lyft/gostats"
 	"github.com/stretchr/testify/assert"

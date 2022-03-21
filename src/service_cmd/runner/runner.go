@@ -1,8 +1,6 @@
 package runner
 
 import (
-	"github.com/envoyproxy/ratelimit/src/metrics"
-	"github.com/envoyproxy/ratelimit/src/stats"
 	"io"
 	"math/rand"
 	"net/http"
@@ -10,20 +8,22 @@ import (
 	"sync"
 	"time"
 
-	gostats "github.com/lyft/gostats"
-
+	"github.com/JavierR14/ratelimit/src/metrics"
+	"github.com/JavierR14/ratelimit/src/stats"
 	"github.com/coocood/freecache"
+
+	gostats "github.com/lyft/gostats"
 
 	pb "github.com/envoyproxy/go-control-plane/envoy/service/ratelimit/v3"
 
-	"github.com/envoyproxy/ratelimit/src/config"
-	"github.com/envoyproxy/ratelimit/src/limiter"
-	"github.com/envoyproxy/ratelimit/src/memcached"
-	"github.com/envoyproxy/ratelimit/src/redis"
-	"github.com/envoyproxy/ratelimit/src/server"
-	ratelimit "github.com/envoyproxy/ratelimit/src/service"
-	"github.com/envoyproxy/ratelimit/src/settings"
-	"github.com/envoyproxy/ratelimit/src/utils"
+	"github.com/JavierR14/ratelimit/src/config"
+	"github.com/JavierR14/ratelimit/src/limiter"
+	"github.com/JavierR14/ratelimit/src/memcached"
+	"github.com/JavierR14/ratelimit/src/redis"
+	"github.com/JavierR14/ratelimit/src/server"
+	ratelimit "github.com/JavierR14/ratelimit/src/service"
+	"github.com/JavierR14/ratelimit/src/settings"
+	"github.com/JavierR14/ratelimit/src/utils"
 	logger "github.com/sirupsen/logrus"
 )
 

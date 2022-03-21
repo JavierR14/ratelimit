@@ -2,16 +2,17 @@ package ratelimit
 
 import (
 	"fmt"
-	"github.com/envoyproxy/ratelimit/src/stats"
 	"math"
 	"strings"
 	"sync"
 
+	"github.com/JavierR14/ratelimit/src/stats"
+
+	"github.com/JavierR14/ratelimit/src/assert"
+	"github.com/JavierR14/ratelimit/src/config"
+	"github.com/JavierR14/ratelimit/src/limiter"
+	"github.com/JavierR14/ratelimit/src/redis"
 	pb "github.com/envoyproxy/go-control-plane/envoy/service/ratelimit/v3"
-	"github.com/envoyproxy/ratelimit/src/assert"
-	"github.com/envoyproxy/ratelimit/src/config"
-	"github.com/envoyproxy/ratelimit/src/limiter"
-	"github.com/envoyproxy/ratelimit/src/redis"
 	"github.com/lyft/goruntime/loader"
 	logger "github.com/sirupsen/logrus"
 	"golang.org/x/net/context"
